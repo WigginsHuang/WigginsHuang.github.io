@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo常用命令]]></title>
+    <url>%2F2017%2F06%2F25%2FNexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[hexo基本命令安装hexo在blog文件夹安装,右键打开Git Bash输入 1$ npm install -g hexo-cli 如果长时间没反应,先执行下面的命令，将npm镜像转为国内镜像，然后在执行上面这条指令 1$ npm config set registry https://registry.npm.taobao.org 初始化hexo将github上的hexo项目clone下来1$ hexo init hexo 安装依赖文件 进入到hexo文件夹 1$ cd hexo 安装依赖文件： 1$ npm install 部署形成文件： 1$ hexo generate 本地测试: 1$ hexo server 部署GitHub命令1$ hexo clean #清除缓存 网页正常情况下可以忽略此条命令 1$ hexo generator #生成静态页面至public目录 1$ hexo deploy #将.deploy目录部署到GitHub 新手上路，请多指教！ over]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[我的第一篇博文]]></title>
     <url>%2F2017%2F06%2F23%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87%2F</url>
     <content type="text"><![CDATA[2017年6月23日，我的第一个个人博客诞生啦！希望能够一直写下去，文笔不怎么好，就这样吧]]></content>
