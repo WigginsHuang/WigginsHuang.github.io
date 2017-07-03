@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript学习笔记(一)]]></title>
+    <url>%2F2017%2F07%2F03%2FJavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[二叉树结构二叉树的概念二叉树（Binary Tree）是n（n&gt;=0）个结点的有限集合，该集合或者为空集（空二叉树），或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树的二叉树组成。 二叉树的特点每个结点最多有两棵子树，所以二叉树中不存在度大于2的结点。二叉树中每一个节点都是一个对象，每一个数据节点都有三个指针，分别是指向父母、左孩子和右孩子的指针。每一个节点都是通过指针相互连接的。相连指针的关系都是父子关系。 二叉树的遍历二叉树的遍历(traversing binary tree)是指从根结点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次且仅被访问一次。 二叉树的遍历有三种方式，如下： （1）前序遍历（DLR），首先访问根结点，然后遍历左子树，最后遍历右子树。简记根-左-右。 （2）中序遍历（LDR），首先遍历左子树，然后访问根结点，最后遍历右子树。简记左-根-右。 （3）后序遍历（LRD），首先遍历左子树，然后遍历右子树，最后访问根结点。简记左-右-根。 前序遍历若二叉树为空，则空操作返回，否则先访问根结点，然后前序遍历左子树，再前序遍历右子树。 遍历的顺序为：A B D H I E J C F K G JavaScript中的代码:1234567function preOrder(root)&#123; if (root) &#123; arr.push(root); preOrder(root.firstElementChild); preOrder(root.lastElementChild); &#125;&#125; 中序遍历若树为空，则空操作返回，否则从根结点开始（注意并不是先访问根结点），中序遍历根结点的左子树，然后是访问根结点，最后中序遍历右子树。 遍历的顺序为：H D I B E J A F K C G JavaScript中的代码:1234567function inOrder(root)&#123; if (root) &#123; inOrder(root.firstElementChild); arr.push(root); inOrder(root.lastElementChild); &#125;&#125; 后序遍历若树为空，则空操作返回，否则从左到右先叶子后结点的方式遍历访问左右子树，最后访问根结点。 遍历的顺序为：H I D J E B K F G C A JavaScript中的代码:1234567function postOrder(root)&#123; if (root) &#123; postOrder(root.firstElementChild); postOrder(root.lastElementChild); arr.push(root); &#125;&#125; 这节我认为的知识难点1、递归函数需要理解(尤其是这个,当然下面的也很重要) 2、二叉树的初步理解 3、DOM要开始注意了 4、JavaScript中的算法的重要性开始凸显出来了 代码地址 demo地址 相关链接:https://segmentfault.com/a/1190000000740261#articleHeader0 http://ife.baidu.com/note/detail/id/1221]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>前端</tag>
+        <tag>算法结构</tag>
+        <tag>DOM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo常用命令]]></title>
     <url>%2F2017%2F06%2F25%2FNexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[hexo基本命令安装hexo在blog文件夹安装,右键打开Git Bash输入 1$ npm install -g hexo-cli 如果长时间没反应,先执行下面的命令，将npm镜像转为国内镜像，然后在执行上面这条指令 1$ npm config set registry https://registry.npm.taobao.org 初始化hexo将github上的hexo项目clone下来1$ hexo init hexo 安装依赖文件 进入到hexo文件夹 1$ cd hexo 安装依赖文件： 1$ npm install 部署形成文件： 1$ hexo generate 本地测试: 1$ hexo server 部署到GitHub的命令1$ hexo clean #清除缓存 网页正常情况下可以忽略此条命令 1$ hexo generator #生成静态页面至public目录 1$ hexo deploy #将.deploy目录部署到GitHub 新手上路，请多指教！ over]]></content>
