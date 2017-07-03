@@ -411,37 +411,15 @@
 
       
         
-          
-            <h2 id="二叉树结构"><a href="#二叉树结构" class="headerlink" title="二叉树结构"></a>二叉树结构</h2><h3 id="二叉树的概念"><a href="#二叉树的概念" class="headerlink" title="二叉树的概念"></a>二叉树的概念</h3><p>二叉树（Binary Tree）是n（n&gt;=0）个结点的有限集合，该集合或者为空集（空二叉树），或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树的二叉树组成。</p>
+          <h2 id="二叉树结构"><a href="#二叉树结构" class="headerlink" title="二叉树结构"></a>二叉树结构</h2><h3 id="二叉树的概念"><a href="#二叉树的概念" class="headerlink" title="二叉树的概念"></a>二叉树的概念</h3><p>二叉树（Binary Tree）是n（n&gt;=0）个结点的有限集合，该集合或者为空集（空二叉树），或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树的二叉树组成。</p>
 <p><img src="http://os1ydoyu7.bkt.clouddn.com/1463290304-544b190e6133b.jpg" alt=""></p>
-<h3 id="二叉树的特点"><a href="#二叉树的特点" class="headerlink" title="二叉树的特点"></a>二叉树的特点</h3><p>每个结点最多有两棵子树，所以二叉树中不存在度大于2的结点。二叉树中每一个节点都是一个对象，每一个数据节点都有三个指针，分别是指向父母、左孩子和右孩子的指针。每一个节点都是通过指针相互连接的。相连指针的关系都是父子关系。</p>
-<h3 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h3><p>二叉树的遍历(traversing binary tree)是指从根结点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次且仅被访问一次。</p>
-<p>二叉树的遍历有三种方式，如下：</p>
-<p>（1）前序遍历（DLR），首先访问根结点，然后遍历左子树，最后遍历右子树。简记根-左-右。</p>
-<p>（2）中序遍历（LDR），首先遍历左子树，然后访问根结点，最后遍历右子树。简记左-根-右。</p>
-<p>（3）后序遍历（LRD），首先遍历左子树，然后遍历右子树，最后访问根结点。简记左-右-根。 </p>
-<h3 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h3><p>若二叉树为空，则空操作返回，否则先访问根结点，然后前序遍历左子树，再前序遍历右子树。</p>
-<p><img src="http://os1ydoyu7.bkt.clouddn.com/qianxu.jpg" alt=""></p>
-<p>遍历的顺序为：<code>A B D H I E J C F K G</code></p>
-<p>JavaScript中的代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function preOrder(root)&#123;</div><div class="line">  if (root) &#123;</div><div class="line">   arr.push(root);</div><div class="line">   preOrder(root.firstElementChild);</div><div class="line">   preOrder(root.lastElementChild);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h3><p>若树为空，则空操作返回，否则从根结点开始（注意并不是先访问根结点），中序遍历根结点的左子树，然后是访问根结点，最后中序遍历右子树。</p>
-<p><img src="http://os1ydoyu7.bkt.clouddn.com/zhongxu.jpg" alt=""></p>
-<p>遍历的顺序为：<code>H D I B E J A F K C G</code></p>
-<p>JavaScript中的代码:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function inOrder(root)&#123;</div><div class="line">  <span class="keyword">if</span> (root) &#123;</div><div class="line">    inOrder(root.firstElementChild);</div><div class="line">    arr.push(root);</div><div class="line">   inOrder(root.lastElementChild);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h3><p>若树为空，则空操作返回，否则从左到右先叶子后结点的方式遍历访问左右子树，最后访问根结点。</p>
-<p><img src="http://os1ydoyu7.bkt.clouddn.com/houxu.jpg" alt=""></p>
-<p>遍历的顺序为：<code>H I D J E B K F G C A</code></p>
-<p>JavaScript中的代码:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function postOrder(root)&#123;</div><div class="line">  <span class="keyword">if</span> (root) &#123;</div><div class="line">   postOrder(root.firstElementChild); </div><div class="line">   postOrder(root.lastElementChild);</div><div class="line">   arr.push(root);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="这节我认为的知识难点"><a href="#这节我认为的知识难点" class="headerlink" title="这节我认为的知识难点"></a>这节我认为的知识难点</h2><p>1、<strong>递归函数需要理解</strong>(尤其是这个,当然下面的也很重要)</p>
-<p>2、二叉树的初步理解</p>
-<p>3、DOM要开始注意了</p>
-<p>4、JavaScript中的算法的重要性开始凸显出来了</p>
-<p><a href="https://github.com/WigginsHuang/JavaScript/tree/master/js_task_6" target="_blank" rel="external">代码地址</a></p>
-<p><a href="http://htmlpreview.github.io/?https://github.com/WigginsHuang/JavaScript/blob/master/js_task_6/index.html" target="_blank" rel="external">demo地址</a></p>
-<p>相关链接:<br><a href="https://segmentfault.com/a/1190000000740261#articleHeader0" target="_blank" rel="external"><br>https://segmentfault.com/a/1190000000740261#articleHeader0</a></p>
-<p><a href="http://ife.baidu.com/note/detail/id/1221" target="_blank" rel="external">http://ife.baidu.com/note/detail/id/1221</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/03/JavaScript学习笔记-一/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
