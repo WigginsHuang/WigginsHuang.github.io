@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog-Home</title>
-  <subtitle>WigginsHuang</subtitle>
+  <title>Wiggins blog</title>
+  <subtitle>蓄势待发,砥砺前行</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wigginshuang.github.io/"/>
