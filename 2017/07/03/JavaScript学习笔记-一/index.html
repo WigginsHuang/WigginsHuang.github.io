@@ -106,7 +106,7 @@
 <meta property="og:image" content="http://os1ydoyu7.bkt.clouddn.com/qianxu.jpg">
 <meta property="og:image" content="http://os1ydoyu7.bkt.clouddn.com/zhongxu.jpg">
 <meta property="og:image" content="http://os1ydoyu7.bkt.clouddn.com/houxu.jpg">
-<meta property="og:updated_time" content="2017-07-03T12:45:37.900Z">
+<meta property="og:updated_time" content="2017-07-08T13:24:50.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript学习笔记(一)">
 <meta name="twitter:description" content="二叉树结构二叉树的概念二叉树（Binary Tree）是n（n&amp;gt;=0）个结点的有限集合，该集合或者为空集（空二叉树），或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树的二叉树组成。">
@@ -425,7 +425,7 @@
 <h3 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h3><p>若二叉树为空，则空操作返回，否则先访问根结点，然后前序遍历左子树，再前序遍历右子树。</p>
 <p><img src="http://os1ydoyu7.bkt.clouddn.com/qianxu.jpg" alt=""></p>
 <p>遍历的顺序为：<code>A B D H I E J C F K G</code></p>
-<p>JavaScript中的代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function preOrder(root)&#123;</div><div class="line">  if (root) &#123;</div><div class="line">   arr.push(root);</div><div class="line">   preOrder(root.firstElementChild);</div><div class="line">   preOrder(root.lastElementChild);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>JavaScript中的代码:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function preOrder(root)&#123;</div><div class="line">  <span class="keyword">if</span> (root) &#123;</div><div class="line">   arr.push(root);</div><div class="line">   preOrder(root.firstElementChild);</div><div class="line">   preOrder(root.lastElementChild);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h3><p>若树为空，则空操作返回，否则从根结点开始（注意并不是先访问根结点），中序遍历根结点的左子树，然后是访问根结点，最后中序遍历右子树。</p>
 <p><img src="http://os1ydoyu7.bkt.clouddn.com/zhongxu.jpg" alt=""></p>
 <p>遍历的顺序为：<code>H D I B E J A F K C G</code></p>
@@ -500,6 +500,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/07/08/javascript学习笔记-二/" rel="prev" title="javascript学习笔记(二)">
+                javascript学习笔记(二) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -570,7 +574,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -592,7 +596,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

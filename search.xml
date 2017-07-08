@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[javascript学习笔记(二)]]></title>
+    <url>%2F2017%2F07%2F08%2Fjavascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C%2F</url>
+    <content type="text"><![CDATA[简单的动画实践之前的想法构思1、动画由计时器setinterval控制开始，并且判断条件由clearinterval关闭计时器控制动画结束 2、每次动画开始先执行clearinterval关闭计时器,防止重复开启计时器导致动画加快或变慢 3、将动画封装成一个函数方法,以便与调用的方便和今后的重复使用 封装的函数123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657function startMove(obj,json,ms,fn)&#123; clearInterval(obj.timer); obj.timer=setInterval(function()&#123; //json数据 多个动画同时进行 for(var attr in json)&#123; var speed=0; var icur=0; var flag=true; //或许元素的属性值 进行计算 if (attr=='opacity') &#123; icur=Math.round(parseFloat(getStyle(obj,attr))*100); &#125; else&#123; icur=parseInt(getStyle(obj,attr)); &#125; //获取速度 并且进行缓冲动画 speed=(json[attr]-icur)/10; speed=speed&gt;0?Math.ceil(speed):Math.floor(speed); if (icur!=json[attr]) &#123; //判断一个动画是否完成 来执行同时进行的动画 flag=false; &#125; if (attr=='opacity') &#123; obj.style[attr]=(icur+speed)/100 &#125;else&#123; obj.style[attr]=icur+speed+'px'; &#125; &#125; if (flag) &#123; clearInterval(obj.timer); //链式动画 判断需不需要执行下一个动画 if (fn) &#123; fn(); &#125; &#125; &#125;,ms) &#125;//以下方法与element.style方法的主要区别就是 这个方法获取的是对象的最终显示样式 即使css没有设置一样可以获取，不过只能作为只读的属性 不能改变 function getStyle(obj,attr)&#123; if (obj.currentStyle) &#123; return obj.currentStyle[attr] //兼容ie 获取元素的属性值 不包括边框 &#125; else&#123; return getComputedStyle(obj,false)[attr]; //兼容一般的浏览器 &#125; &#125; 注意事项1、封装的函数动画属于缓冲动画，运动轨迹由快变慢，匀速动画只需执行判断动画方向后设置speed的值即可。 2、由于可以兼容多个动画同时进行，函数需要先进行判断所有动画懂执行完才能结束，所以要在for-in循环之前新建flag,循环之后判断后结束动画。 3、关于封装的获取对象属性值的函数中的getComputedStyle的函数于element.style的区别。 (1)前者获取的是对象最终在页面的属性值,后者只是获取的是css样式设置的属性值 (2)前者只是只读属性，后者可以读写 4、offsetwidth与clientwidth主要区别:前者获取的宽度包括了滚动条和边框 学习感触1、虽然这个运动框架是根据教程来的，但主要还是由自己一个一个来打出来的，也理解了动画的执行过程。 2、看似简单动画后面需要思考的知识点也很多,出现的bug也不少，需要自己慢慢排查并且解决。 3、前端并不简单，希望自己能一直坚持下去 the end]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>前端</tag>
+        <tag>动画</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript学习笔记(一)]]></title>
     <url>%2F2017%2F07%2F03%2FJavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80%2F</url>
     <content type="text"><![CDATA[二叉树结构二叉树的概念二叉树（Binary Tree）是n（n&gt;=0）个结点的有限集合，该集合或者为空集（空二叉树），或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树的二叉树组成。 二叉树的特点每个结点最多有两棵子树，所以二叉树中不存在度大于2的结点。二叉树中每一个节点都是一个对象，每一个数据节点都有三个指针，分别是指向父母、左孩子和右孩子的指针。每一个节点都是通过指针相互连接的。相连指针的关系都是父子关系。 二叉树的遍历二叉树的遍历(traversing binary tree)是指从根结点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次且仅被访问一次。 二叉树的遍历有三种方式，如下： （1）前序遍历（DLR），首先访问根结点，然后遍历左子树，最后遍历右子树。简记根-左-右。 （2）中序遍历（LDR），首先遍历左子树，然后访问根结点，最后遍历右子树。简记左-根-右。 （3）后序遍历（LRD），首先遍历左子树，然后遍历右子树，最后访问根结点。简记左-右-根。 前序遍历若二叉树为空，则空操作返回，否则先访问根结点，然后前序遍历左子树，再前序遍历右子树。 遍历的顺序为：A B D H I E J C F K G JavaScript中的代码:1234567function preOrder(root)&#123; if (root) &#123; arr.push(root); preOrder(root.firstElementChild); preOrder(root.lastElementChild); &#125;&#125; 中序遍历若树为空，则空操作返回，否则从根结点开始（注意并不是先访问根结点），中序遍历根结点的左子树，然后是访问根结点，最后中序遍历右子树。 遍历的顺序为：H D I B E J A F K C G JavaScript中的代码:1234567function inOrder(root)&#123; if (root) &#123; inOrder(root.firstElementChild); arr.push(root); inOrder(root.lastElementChild); &#125;&#125; 后序遍历若树为空，则空操作返回，否则从左到右先叶子后结点的方式遍历访问左右子树，最后访问根结点。 遍历的顺序为：H I D J E B K F G C A JavaScript中的代码:1234567function postOrder(root)&#123; if (root) &#123; postOrder(root.firstElementChild); postOrder(root.lastElementChild); arr.push(root); &#125;&#125; 这节我认为的知识难点1、递归函数需要理解(尤其是这个,当然下面的也很重要) 2、二叉树的初步理解 3、DOM要开始注意了 4、JavaScript中的算法的重要性开始凸显出来了 代码地址 demo地址 相关链接:https://segmentfault.com/a/1190000000740261#articleHeader0 http://ife.baidu.com/note/detail/id/1221]]></content>

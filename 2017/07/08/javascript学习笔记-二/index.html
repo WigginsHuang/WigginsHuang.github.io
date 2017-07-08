@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, World" />
+  <meta name="keywords" content="JavaScript,前端,动画," />
 
 
 
@@ -95,15 +95,17 @@
 
 
 
-<meta name="description" content="HWJ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wiggins blog">
-<meta property="og:url" content="https://wigginshuang.github.io/archives/index.html">
+<meta name="description" content="简单的动画实践之前的想法构思1、动画由计时器setinterval控制开始，并且判断条件由clearinterval关闭计时器控制动画结束 2、每次动画开始先执行clearinterval关闭计时器,防止重复开启计时器导致动画加快或变慢 3、将动画封装成一个函数方法,以便与调用的方便和今后的重复使用 封装的函数12345678910111213141516171819202122232425262">
+<meta name="keywords" content="JavaScript,前端,动画">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript学习笔记(二)">
+<meta property="og:url" content="https://wigginshuang.github.io/2017/07/08/javascript学习笔记-二/index.html">
 <meta property="og:site_name" content="Wiggins blog">
-<meta property="og:description" content="HWJ">
+<meta property="og:description" content="简单的动画实践之前的想法构思1、动画由计时器setinterval控制开始，并且判断条件由clearinterval关闭计时器控制动画结束 2、每次动画开始先执行clearinterval关闭计时器,防止重复开启计时器导致动画加快或变慢 3、将动画封装成一个函数方法,以便与调用的方便和今后的重复使用 封装的函数12345678910111213141516171819202122232425262">
+<meta property="og:updated_time" content="2017-07-08T13:55:33.574Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wiggins blog">
-<meta name="twitter:description" content="HWJ">
+<meta name="twitter:title" content="javascript学习笔记(二)">
+<meta name="twitter:description" content="简单的动画实践之前的想法构思1、动画由计时器setinterval控制开始，并且判断条件由clearinterval关闭计时器控制动画结束 2、每次动画开始先执行clearinterval关闭计时器,防止重复开启计时器导致动画加快或变慢 3、将动画封装成一个函数方法,以便与调用的方便和今后的重复使用 封装的函数12345678910111213141516171819202122232425262">
 
 
 
@@ -131,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://wigginshuang.github.io/archives/"/>
+  <link rel="canonical" href="https://wigginshuang.github.io/2017/07/08/javascript学习笔记-二/"/>
 
 
 
 
 
-  <title>归档 | Wiggins blog</title>
+  <title>javascript学习笔记(二) | Wiggins blog</title>
   
 
 
@@ -162,7 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -310,214 +312,187 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 5 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/08/javascript学习笔记-二/" itemprop="url">
-              
-                <span itemprop="name">javascript学习笔记(二)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-08T21:16:03+08:00"
-              content="2017-07-08" >
-          07-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/03/JavaScript学习笔记-一/" itemprop="url">
-              
-                <span itemprop="name">JavaScript学习笔记(一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-03T19:31:27+08:00"
-              content="2017-07-03" >
-          07-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/25/Nexo常用命令/" itemprop="url">
-              
-                <span itemprop="name">Hexo常用命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-25T10:39:54+08:00"
-              content="2017-06-25" >
-          06-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/23/我的第一篇博文/" itemprop="url">
-              
-                <span itemprop="name">我的第一篇博文</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-23T20:53:21+08:00"
-              content="2017-06-23" >
-          06-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/23/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-23T19:27:22+08:00"
-              content="2017-06-23" >
-          06-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wigginshuang.github.io/2017/07/08/javascript学习笔记-二/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WigginsHuang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://os1ydoyu7.bkt.clouddn.com/22997042.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wiggins blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">javascript学习笔记(二)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-08T21:16:03+08:00">
+                2017-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="简单的动画"><a href="#简单的动画" class="headerlink" title="简单的动画"></a>简单的动画</h2><h3 id="实践之前的想法构思"><a href="#实践之前的想法构思" class="headerlink" title="实践之前的想法构思"></a>实践之前的想法构思</h3><p>1、动画由计时器setinterval控制开始，并且判断条件由clearinterval关闭计时器控制动画结束</p>
+<p>2、每次动画开始先执行clearinterval关闭计时器,防止重复开启计时器导致动画加快或变慢</p>
+<p>3、将动画封装成一个函数方法,以便与调用的方便和今后的重复使用</p>
+<h3 id="封装的函数"><a href="#封装的函数" class="headerlink" title="封装的函数"></a>封装的函数</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">function startMove(obj,json,ms,fn)&#123;</div><div class="line">    clearInterval(obj.timer);</div><div class="line">    obj.timer=setInterval(function()&#123;</div><div class="line">    //json数据 多个动画同时进行    </div><div class="line">    for(var attr in json)&#123;</div><div class="line">    var speed=0;</div><div class="line">    var icur=0;</div><div class="line">    var flag=true;</div><div class="line">    //或许元素的属性值 进行计算</div><div class="line">    if (attr=='opacity') &#123;</div><div class="line"></div><div class="line">        icur=Math.round(parseFloat(getStyle(obj,attr))*100);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        icur=parseInt(getStyle(obj,attr));</div><div class="line">    &#125;</div><div class="line">     //获取速度 并且进行缓冲动画</div><div class="line">     speed=(json[attr]-icur)/10;</div><div class="line">     speed=speed&gt;0?Math.ceil(speed):Math.floor(speed);</div><div class="line">     </div><div class="line">    if (icur!=json[attr]) &#123;</div><div class="line"></div><div class="line">      //判断一个动画是否完成 来执行同时进行的动画</div><div class="line">      flag=false;</div><div class="line">    &#125;   </div><div class="line">        if (attr=='opacity') &#123;</div><div class="line">        obj.style[attr]=(icur+speed)/100</div><div class="line">        &#125;else&#123;</div><div class="line"></div><div class="line">        obj.style[attr]=icur+speed+'px';</div><div class="line">        &#125;</div><div class="line">   </div><div class="line">     &#125;</div><div class="line">       if (flag) &#123;</div><div class="line">        clearInterval(obj.timer);</div><div class="line">      //链式动画 判断需不需要执行下一个动画</div><div class="line">       if (fn) &#123;</div><div class="line">        fn();</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">    &#125;,ms)</div><div class="line">   </div><div class="line">   &#125;</div><div class="line"></div><div class="line">//以下方法与element.style方法的主要区别就是 这个方法获取的是对象的最终显示样式  即使css没有设置一样可以获取，不过只能作为只读的属性 不能改变</div><div class="line"></div><div class="line">     function getStyle(obj,attr)&#123;</div><div class="line">     if (obj.currentStyle) &#123;</div><div class="line"></div><div class="line">        return obj.currentStyle[attr]  //兼容ie 获取元素的属性值 不包括边框</div><div class="line">     &#125;</div><div class="line">     else&#123;</div><div class="line">       return getComputedStyle(obj,false)[attr]; //兼容一般的浏览器 </div><div class="line">       &#125;</div><div class="line">     &#125;</div></pre></td></tr></table></figure>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>1、封装的函数动画属于缓冲动画，运动轨迹由快变慢，匀速动画只需执行判断动画方向后设置speed的值即可。</p>
+<p>2、由于可以兼容多个动画同时进行，函数需要先进行判断所有动画懂执行完才能结束，所以要在for-in循环之前新建flag,<br>循环之后判断后结束动画。</p>
+<p>3、关于封装的获取对象属性值的函数中的<br>getComputedStyle的函数于element.style的区别。</p>
+<p>(1)前者获取的是对象最终在页面的属性值,后者只是获取的是css样式设置的属性值</p>
+<p>(2)前者只是只读属性，后者可以读写</p>
+<p>4、offsetwidth与clientwidth主要区别:<br>前者获取的宽度包括了滚动条和边框</p>
+<h2 id="学习感触"><a href="#学习感触" class="headerlink" title="学习感触"></a>学习感触</h2><p>1、虽然这个运动框架是根据教程来的，但主要还是由自己一个一个来打出来的，也理解了动画的执行过程。</p>
+<p>2、看似简单动画后面需要思考的知识点也很多,出现的bug也不少，需要自己慢慢排查并且解决。</p>
+<p>3、前端并不简单，希望自己能一直坚持下去</p>
+<p>the end</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+            <a href="/tags/动画/" rel="tag"># 动画</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/03/JavaScript学习笔记-一/" rel="next" title="JavaScript学习笔记(一)">
+                <i class="fa fa-chevron-left"></i> JavaScript学习笔记(一)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -525,6 +500,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -544,8 +523,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://os1ydoyu7.bkt.clouddn.com/22997042.jpg"
@@ -643,6 +631,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单的动画"><span class="nav-number">1.</span> <span class="nav-text">简单的动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实践之前的想法构思"><span class="nav-number">1.1.</span> <span class="nav-text">实践之前的想法构思</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#封装的函数"><span class="nav-number">1.2.</span> <span class="nav-text">封装的函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">2.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习感触"><span class="nav-number">3.</span> <span class="nav-text">学习感触</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -765,11 +769,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
