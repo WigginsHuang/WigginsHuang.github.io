@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wigginshuang.github.io/"/>
-  <updated>2017-07-08T14:01:11.288Z</updated>
+  <updated>2017-07-08T14:03:48.366Z</updated>
   <id>https://wigginshuang.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>javascript学习笔记(二)</title>
+    <title>JavaScript学习笔记(二)</title>
     <link href="https://wigginshuang.github.io/2017/07/08/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/"/>
     <id>https://wigginshuang.github.io/2017/07/08/javascript学习笔记-二/</id>
     <published>2017-07-08T13:16:03.000Z</published>
-    <updated>2017-07-08T14:01:11.288Z</updated>
+    <updated>2017-07-08T14:03:48.366Z</updated>
     
     <content type="html"><![CDATA[<h2 id="简单的动画"><a href="#简单的动画" class="headerlink" title="简单的动画"></a>简单的动画</h2><h3 id="实践之前的想法构思"><a href="#实践之前的想法构思" class="headerlink" title="实践之前的想法构思"></a>实践之前的想法构思</h3><p>1、动画由计时器setinterval控制开始，并且判断条件由clearinterval关闭计时器控制动画结束</p>
 <p>2、每次动画开始先执行clearinterval关闭计时器,防止重复开启计时器导致动画加快或变慢</p>
