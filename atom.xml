@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wigginshuang.github.io/"/>
-  <updated>2017-07-08T14:03:48.366Z</updated>
+  <updated>2017-07-09T00:32:54.063Z</updated>
   <id>https://wigginshuang.github.io/</id>
   
   <author>
@@ -20,11 +20,12 @@
     <link href="https://wigginshuang.github.io/2017/07/08/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/"/>
     <id>https://wigginshuang.github.io/2017/07/08/javascript学习笔记-二/</id>
     <published>2017-07-08T13:16:03.000Z</published>
-    <updated>2017-07-08T14:03:48.366Z</updated>
+    <updated>2017-07-09T00:32:54.063Z</updated>
     
     <content type="html"><![CDATA[<h2 id="简单的动画"><a href="#简单的动画" class="headerlink" title="简单的动画"></a>简单的动画</h2><h3 id="实践之前的想法构思"><a href="#实践之前的想法构思" class="headerlink" title="实践之前的想法构思"></a>实践之前的想法构思</h3><p>1、动画由计时器setinterval控制开始，并且判断条件由clearinterval关闭计时器控制动画结束</p>
 <p>2、每次动画开始先执行clearinterval关闭计时器,防止重复开启计时器导致动画加快或变慢</p>
 <p>3、将动画封装成一个函数方法,以便与调用的方便和今后的重复使用</p>
+<a id="more"></a>
 <h3 id="封装的函数"><a href="#封装的函数" class="headerlink" title="封装的函数"></a>封装的函数</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">function startMove(obj,json,ms,fn)&#123;</div><div class="line">    clearInterval(obj.timer);</div><div class="line">    obj.timer=setInterval(function()&#123;</div><div class="line">    //json数据 多个动画同时进行    </div><div class="line">    for(var attr in json)&#123;</div><div class="line">    var speed=0;</div><div class="line">    var icur=0;</div><div class="line">    var flag=true;</div><div class="line">    //或许元素的属性值 进行计算</div><div class="line">    if (attr=='opacity') &#123;</div><div class="line"></div><div class="line">        icur=Math.round(parseFloat(getStyle(obj,attr))*100);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        icur=parseInt(getStyle(obj,attr));</div><div class="line">    &#125;</div><div class="line">     //获取速度 并且进行缓冲动画</div><div class="line">     speed=(json[attr]-icur)/10;</div><div class="line">     speed=speed&gt;0?Math.ceil(speed):Math.floor(speed);</div><div class="line">     </div><div class="line">    if (icur!=json[attr]) &#123;</div><div class="line"></div><div class="line">      //判断一个动画是否完成 来执行同时进行的动画</div><div class="line">      flag=false;</div><div class="line">    &#125;   </div><div class="line">        if (attr=='opacity') &#123;</div><div class="line">        obj.style[attr]=(icur+speed)/100</div><div class="line">        &#125;else&#123;</div><div class="line"></div><div class="line">        obj.style[attr]=icur+speed+'px';</div><div class="line">        &#125;</div><div class="line">   </div><div class="line">     &#125;</div><div class="line">       if (flag) &#123;</div><div class="line">        clearInterval(obj.timer);</div><div class="line">      //链式动画 判断需不需要执行下一个动画</div><div class="line">       if (fn) &#123;</div><div class="line">        fn();</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">    &#125;,ms)</div><div class="line">   </div><div class="line">   &#125;</div><div class="line"></div><div class="line">//以下方法与element.style方法的主要区别就是 这个方法获取的是对象的最终显示样式  即使css没有设置一样可以获取，不过只能作为只读的属性 不能改变</div><div class="line"></div><div class="line">     function getStyle(obj,attr)&#123;</div><div class="line">     if (obj.currentStyle) &#123;</div><div class="line"></div><div class="line">        return obj.currentStyle[attr]  //兼容ie 获取元素的属性值 不包括边框</div><div class="line">     &#125;</div><div class="line">     else&#123;</div><div class="line">       return getComputedStyle(obj,false)[attr]; //兼容一般的浏览器 </div><div class="line">       &#125;</div><div class="line">     &#125;</div></pre></td></tr></table></figure>
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>1、封装的函数动画属于缓冲动画，运动轨迹由快变慢，匀速动画只需执行判断动画方向后设置speed的值即可。</p>
 <p>2、由于可以兼容多个动画同时进行，函数需要先进行判断所有动画懂执行完才能结束，所以要在for-in循环之前新建flag,循环之后判断后结束动画。</p>
@@ -40,7 +41,9 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;简单的动画&quot;&gt;&lt;a href=&quot;#简单的动画&quot; class=&quot;headerlink&quot; title=&quot;简单的动画&quot;&gt;&lt;/a&gt;简单的动画&lt;/h2&gt;&lt;h3 id=&quot;实践之前的想法构思&quot;&gt;&lt;a href=&quot;#实践之前的想法构思&quot; class=&quot;headerlink&quot; ti
+      &lt;h2 id=&quot;简单的动画&quot;&gt;&lt;a href=&quot;#简单的动画&quot; class=&quot;headerlink&quot; title=&quot;简单的动画&quot;&gt;&lt;/a&gt;简单的动画&lt;/h2&gt;&lt;h3 id=&quot;实践之前的想法构思&quot;&gt;&lt;a href=&quot;#实践之前的想法构思&quot; class=&quot;headerlink&quot; title=&quot;实践之前的想法构思&quot;&gt;&lt;/a&gt;实践之前的想法构思&lt;/h3&gt;&lt;p&gt;1、动画由计时器setinterval控制开始，并且判断条件由clearinterval关闭计时器控制动画结束&lt;/p&gt;
+&lt;p&gt;2、每次动画开始先执行clearinterval关闭计时器,防止重复开启计时器导致动画加快或变慢&lt;/p&gt;
+&lt;p&gt;3、将动画封装成一个函数方法,以便与调用的方便和今后的重复使用&lt;/p&gt;
     
     </summary>
     
